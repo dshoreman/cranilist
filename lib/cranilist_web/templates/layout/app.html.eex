@@ -33,5 +33,6 @@
     </div>
     <%= render @view_module, @view_template, assigns %>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.9.0/js/all.js"></script>
   </body>
 </html>
