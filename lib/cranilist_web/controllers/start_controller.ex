@@ -6,7 +6,11 @@ defmodule CranilistWeb.StartController do
   end
 
   def fetch_queue(conn, %{"crsessid" => sess}) do
+    client = Crunchy.client(sess)
+    {:ok, response} = Crunchy.queue(client)
+
     conn
+    |> assign(:queue, response.body["data"])
     |> assign(:session_id, sess)
     |> render(:queue)
   end
