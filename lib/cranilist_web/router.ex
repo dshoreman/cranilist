@@ -17,6 +17,7 @@ defmodule CranilistWeb.Router do
     pipe_through :browser
 
     get "/", StartController, :index
+    post "/", StartController, :fetch_queue
   end
 
   # Other scopes may use custom stacks.

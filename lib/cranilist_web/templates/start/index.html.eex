@@ -2,17 +2,20 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Let's Start With Your Session ID:</h1>
-      <div class="field">
-        <p class="control has-icons-left">
-          <input class="input is-large" placeholder="364ecd00a030c388f0e70a66081a342d" />
-          <span class="icon is-medium is-left">
-            <i class="fas fa-key"></i>
-          </span>
-        </p>
-      </div>
-      <div class="field">
-        <button type="submit" class="button is-primary is-large is-inverted is-outlined">Load CrunchyRoll Queue</button>
-      </div>
+      <%= form_tag(Routes.start_path(@conn, :fetch_queue)) %>
+        <div class="field">
+          <p class="control has-icons-left">
+            <input class="input is-large" name="crsessid"
+              placeholder="364ecd00a030c388f0e70a66081a342d" />
+            <span class="icon is-medium is-left">
+              <i class="fas fa-key"></i>
+            </span>
+          </p>
+        </div>
+        <div class="field">
+          <button type="submit" class="button is-primary is-large is-inverted is-outlined">Load CrunchyRoll Queue</button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
