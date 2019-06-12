@@ -16,7 +16,7 @@ defmodule CranilistWeb.Router do
   scope "/", CranilistWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", StartController, :index
   end
 
   # Other scopes may use custom stacks.

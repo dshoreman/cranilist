@@ -1,4 +1,4 @@
-defmodule CranilistWeb.PageController do
+defmodule CranilistWeb.StartController do
   use CranilistWeb, :controller
 
   def index(conn, _params) do
